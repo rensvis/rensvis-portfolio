@@ -7,6 +7,10 @@
 
 .project {
 
+  .one-half {
+    margin-bottom: var(--spacing-xl);
+  }
+
   &__title-code {
     // margin-top: var(--spacing-l);
   }

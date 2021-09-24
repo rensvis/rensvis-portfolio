@@ -134,14 +134,23 @@ header {
       padding: 1rem 3rem;
     }
 
-    &__item,
+    &__link,
     .btn {
+      color: var(--color-text);
+    }
+
+    .btn {
+      color: var(--color-text);
+      border-color: var(--color-text);
+    }
+
+    &__item {
       font-size: 1.4rem;
       // text-align: right;
     }
 
     &.open {
-      left: 30%;
+      left: 20%;
       z-index: 1;
     }
   }
@@ -195,7 +204,8 @@ header {
 $hamburgerWidth: 20px;
 $hamburgerHeight: 14px;
 $hamburgerSpeed: 0.3s;
-$hamburgerTransition: transform $hamburgerSpeed cubic-bezier(0, 0, 0, 0.99);
+$hamburgerTransition: transform $hamburgerSpeed cubic-bezier(0, 0, 0, 0.99),
+background-color .6s;
 
 // hamburger icon
 .hamburger {
@@ -217,7 +227,7 @@ $hamburgerTransition: transform $hamburgerSpeed cubic-bezier(0, 0, 0, 0.99);
     top: 50%;
     left: 50%;
     transform: rotate(0deg);
-    transition: $themeTransition, $hamburgerTransition;
+    transition: $hamburgerTransition;
     transform-origin: center;
   }
 
@@ -239,6 +249,7 @@ $hamburgerTransition: transform $hamburgerSpeed cubic-bezier(0, 0, 0, 0.99);
 
     .hamburger__bar {
       // background-color: white;
+      background-color: var(--color-text);
     }
 
     .hamburger__bar:nth-child(1) {

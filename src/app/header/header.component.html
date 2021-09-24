@@ -2,7 +2,7 @@
 <aside class="theme-switcher" [ngClass]="{'open': themeSwitcherVisible===true}">
   <div class="theme-switcher__inner">
     <p class="theme-switcher__text center">Pick a style</p>
-    <ul class="theme-switcher__list">
+    <ul class="theme-switcher__list" #themeList>
 
       <li class="theme-switcher__item" *ngFor="let theme of themes">
         <button [class]="'theme-switcher__btn theme-switcher__btn--' + theme.name"

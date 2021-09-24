@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   themeArray: any[] = [];
   activeTheme: string;
   currentRoute: string;
+  @ViewChild('themeList') themeList: ElementRef;
 
   @ViewChild('titleElement') titleElement: ElementRef;
   isHome: boolean = false;
@@ -61,6 +62,22 @@ export class HeaderComponent implements OnInit {
       top: 0,
       behavior: 'smooth'
     });
+
+    if (this.themeSwitcherVisible) {
+      const list = this.themeList.nativeElement
+      const currentItem = list.querySelector('.theme-switcher__btn.active')
+      console.log(currentItem.parentElement);
+      const box = currentItem.parentElement.getBoundingClientRect();
+
+      console.log((list.scrollLeft + box.left + box.width/2) - window.innerWidth)
+      // console.log(box.left)
+      list.scroll({
+        left: (list.scrollLeft + box.left + box.width/2) - window.innerWidth/2,
+        behavior: 'smooth'
+      })
+
+    }
+
     // if (this.themeSwitcherVisible) {
     //   document.getElementsByTagName('body')[0].classList.add('blur');
     // } else {
