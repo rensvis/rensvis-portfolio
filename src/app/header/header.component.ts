@@ -192,7 +192,6 @@ export class HeaderComponent implements OnInit {
       // const test2 = i % colors.length
       // console.log(i, test)
       const color = colors[i % colors.length];
-      console.log(color)
       const dim = randomIntFromInterval(190, 250).toString() + 'px';
 
       // random values
@@ -202,6 +201,7 @@ export class HeaderComponent implements OnInit {
       circle.style.height = dim
       circle.style.background = color;
 
+      // not using, too heavy on cpu
       const anitmateCircle = () => {
         const oldTop = window.getComputedStyle(circle).top,
           oldLeft = window.getComputedStyle(circle).left,
@@ -221,8 +221,7 @@ export class HeaderComponent implements OnInit {
           anitmateCircle();
         }, animateTime);
       }
-
-      anitmateCircle();
+      // anitmateCircle();
 
       container?.insertAdjacentElement('beforeend', circle)
     }
