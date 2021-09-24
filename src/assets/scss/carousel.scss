@@ -1,0 +1,131 @@
+$slideWidth: 700px;
+$slideMargin: var(--spacing-m);
+
+.carousel {
+  margin: var(--spacing-xxxl) 0;
+  margin: var(--spacing-xxl) 0 var(--spacing-m) 0;
+
+  &__slider {
+    position: relative;
+  }
+
+  &__slide-container {
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+    // scroll snap
+    scroll-snap-type: x mandatory;
+    transition: margin-left .4s;
+
+    // if a full width slider is needed this el needs to be 100% width and overflow set to hidden
+    padding: 0 calc((100% - #{$slideWidth})/2);
+
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-track {
+      display: none;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    &--left {
+      left: 30px;
+    }
+
+    &--right {
+      right: 30px;
+    }
+  }
+
+
+  &__dots {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    // background: rgba(255, 255, 255, 0.397);
+    // backdrop-filter: blur(4px);
+    border-radius: 50px;
+    width: fit-content;
+    margin: auto;
+    margin-top: var(--spacing-l);
+  }
+
+  &__dot-container {
+    cursor: pointer;
+    padding: 3px;
+
+    &:hover,
+    &.current {
+      .carousel__dot {
+        background: var(--color-primary);
+      }
+    }
+  }
+
+  &__dot-container {
+
+    &:hover,
+    &.current {
+      .carousel__dot {
+        background: var(--color-primary);
+      }
+    }
+
+    &.current {
+      .carousel__dot {
+        width: 30px;
+        background: var(--color-primary-trans) !important;
+        position: relative;
+        overflow: hidden;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          height: 100%;
+          left: 0;
+          right: calc(100% - var(--percent));
+          background: var(--color-primary);
+          transition: all .3s;
+        }
+      }
+    }
+  }
+
+  &__dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 100px;
+    transition: all .2s;
+    background: var(--color-text);
+  }
+
+
+  &__arrow {
+    font-size: 1.5rem;
+    padding: var(--spacing-s);
+    border-radius: var(--br);
+    transition: all .2s;
+    background-color: var(--color-bg-offset);
+
+    @include atSmall {
+      display: none;
+    }
+
+    &:hover {
+      // background-color: rgba(255, 255, 255, 0.623);
+    }
+  }
+}
+
+.carousel__slide-container>div {
+  flex: 0 0 $slideWidth;
+  scroll-snap-align: center;
+  margin: 0 $slideMargin;
+  max-width: 100%;
+}

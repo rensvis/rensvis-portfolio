@@ -1,0 +1,265 @@
+.one-half,
+.one-third,
+.one-fourth,
+.one-fifth,
+.one-sixth {
+  /* padding-bottom: 1.6rem; */
+}
+
+/* mostly use mg or lg */
+$rowWidthExtraLarge: 90%;
+$rowWidthLarge: 96%;
+$rowWidthMedium: 98%;
+$rowWidthSmall: 99%;
+
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .two-thirds {
+    flex-basis: 66.66%;
+    min-width: 0;
+  }
+
+  .one-half {
+    flex-basis: 50%;
+    min-width: 0;
+  }
+
+  .one-third {
+    flex-basis: 33.33%;
+    min-width: 0;
+  }
+
+  .one-quarter {
+    flex-basis: 25%;
+    min-width: 0;
+  }
+
+  .one-fifth {
+    flex-basis: 20%;
+    min-width: 0;
+  }
+
+  .one-sixth {
+    flex-basis: 16.66%;
+    min-width: 0;
+  }
+
+  .three-quarters {
+    flex-basis: 75%;
+    min-width: 0;
+  }
+
+  .five-sixths {
+    flex-basis: 83.33%;
+    min-width: 0;
+  }
+
+  .one-eighth {
+    flex-basis: 12.5%;
+    min-width: 0;
+  }
+
+  .seven-eighths {
+    flex-basis: 87.5%;
+    min-width: 0;
+  }
+
+  &--xlg {
+
+    /* large gutter --------------------- */
+    .two-thirds {
+      flex-basis: calc(#{$rowWidthExtraLarge}/3*2);
+    }
+
+    .one-half {
+      flex-basis: calc(#{$rowWidthExtraLarge}/2);
+    }
+
+    .one-third {
+      flex-basis: calc(#{$rowWidthExtraLarge}/3);
+    }
+
+    .one-quarter {
+      flex-basis: calc(#{$rowWidthExtraLarge}/4)
+    }
+
+    .one-fifth {
+      flex-basis: calc(#{$rowWidthExtraLarge}/5);
+    }
+
+    .one-sixth {
+      flex-basis: calc(#{$rowWidthExtraLarge}/6);
+    }
+
+    .three-quarters {
+      flex-basis: calc(#{$rowWidthExtraLarge}/4*3);
+    }
+
+    .five-sixths {
+      flex-basis: calc(#{$rowWidthExtraLarge}/6*5)
+    }
+
+    .one-eighth {
+      flex-basis: calc(#{$rowWidthExtraLarge}/8)
+    }
+
+    .seven-eighths {
+      flex-basis: calc(#{$rowWidthExtraLarge}/8*7)
+    }
+  }
+
+  &--lg {
+
+    /* large gutter --------------------- */
+    .two-thirds {
+      flex-basis: calc(#{$rowWidthLarge}/3*2);
+    }
+
+    .one-half {
+      flex-basis: calc(#{$rowWidthLarge}/2);
+    }
+
+    .one-third {
+      flex-basis: calc(#{$rowWidthLarge}/3);
+    }
+
+    .one-quarter {
+      flex-basis: calc(#{$rowWidthLarge}/4)
+    }
+
+    .one-fifth {
+      flex-basis: calc(#{$rowWidthLarge}/5);
+    }
+
+    .one-sixth {
+      flex-basis: calc(#{$rowWidthLarge}/6);
+    }
+
+    .three-quarters {
+      flex-basis: calc(#{$rowWidthLarge}/4*3);
+    }
+
+    .five-sixths {
+      flex-basis: calc(#{$rowWidthLarge}/6*5)
+    }
+
+    .one-eighth {
+      flex-basis: calc(#{$rowWidthLarge}/8)
+    }
+
+    .seven-eighths {
+      flex-basis: calc(#{$rowWidthLarge}/8*7)
+    }
+  }
+
+
+  &--mg {
+
+    /* medium gutter ------------------ */
+    .two-thirds {
+      flex-basis: calc(#{$rowWidthMedium}/3*2);
+    }
+
+    .one-half {
+      flex-basis: calc(#{$rowWidthMedium}/2);
+    }
+
+    .one-third {
+      flex-basis: calc(#{$rowWidthMedium}/3);
+    }
+
+    .one-quarter {
+      flex-basis: calc(#{$rowWidthMedium}/4)
+    }
+
+    .one-fifth {
+      flex-basis: calc(#{$rowWidthMedium}/5);
+    }
+
+    .one-sixth {
+      flex-basis: calc(#{$rowWidthMedium}/6);
+    }
+
+    .three-quarters {
+      flex-basis: calc(#{$rowWidthMedium}/4*3);
+    }
+
+    .five-sixths {
+      flex-basis: calc(#{$rowWidthMedium}/6*5)
+    }
+
+    .one-eighth {
+      flex-basis: calc(#{$rowWidthMedium}/8)
+    }
+
+    .seven-eighths {
+      flex-basis: calc(#{$rowWidthMedium}/8*7)
+    }
+  }
+
+  &--sg {
+
+    /* small gutter */
+    .two-thirds {
+      flex-basis: calc(#{$rowWidthSmall}/3*2);
+    }
+
+    .one-half {
+      flex-basis: calc(#{$rowWidthSmall}/2);
+    }
+
+    .one-third {
+      flex-basis: calc(#{$rowWidthSmall}/3);
+    }
+
+    .one-quarter {
+      flex-basis: calc(#{$rowWidthSmall}/4)
+    }
+
+    .one-fifth {
+      flex-basis: calc(#{$rowWidthSmall}/5);
+    }
+
+    .one-sixth {
+      flex-basis: calc(#{$rowWidthSmall}/6);
+    }
+
+    .three-quarters {
+      flex-basis: calc(#{$rowWidthSmall}/4*3);
+    }
+
+    .five-sixths {
+      flex-basis: calc(#{$rowWidthSmall}/6*5)
+    }
+
+    .one-eighth {
+      flex-basis: calc(#{$rowWidthSmall}/8)
+    }
+
+    .seven-eighths {
+      flex-basis: calc(#{$rowWidthSmall}/8*7)
+    }
+  }
+
+  /* // original -2%
+
+   */
+
+  @include atMedium {
+    flex-direction: column;
+  }
+
+  @include fullSize {
+    justify-content: space-between;
+  }
+
+  &--force {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,91 @@
+@mixin atXSmall {
+  @media (max-width: 350px) {
+    @content;
+  }
+}
+
+@mixin atSmall {
+  @media (max-width: 530px) {
+    @content;
+  }
+}
+
+@mixin notSmall {
+  @media (min-width: 530px) {
+    @content;
+  }
+}
+
+@mixin atSmallMedium {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin atMedium {
+  @media (max-width: 700px) {
+    @content;
+  }
+}
+
+@mixin fullSize {
+  @media (min-width: 700px) {
+    @content;
+  }
+}
+
+@mixin atWide {
+  @media (min-width: 1441px) {
+    @content;
+  }
+}
+
+@mixin atUltraWide {
+  @media (min-width: 2400px) {
+    @content;
+  }
+}
+
+
+// mobile menu
+@mixin mobileMenu {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+// desktop menu
+@mixin desktopMenu {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+
+
+
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+
+  @return $map;
+}
+
+
+// animations
+@keyframes clockwise {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@mixin coverBackground {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover; // cover
+}

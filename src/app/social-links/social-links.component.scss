@@ -1,0 +1,17 @@
+.social-list {
+  list-style: none;
+}
+
+.social {
+  display: inline-block;
+  margin: var(--spacing-s);
+  font-size: 1.6rem;
+
+  &__link {
+    transition: all .2s;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+}

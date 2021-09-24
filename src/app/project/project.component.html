@@ -1,0 +1,38 @@
+<section class="project">
+  <div class="container">
+    <div class="row row--lg">
+
+      <div class="one-half">
+
+        <h2 class="project__title-about">About this project</h2>
+        <p class="project__description">{{ project.description.long }}</p>
+        <span class="tag" *ngFor="let tag of project.tags" [innerHTML]="tag.icon + tag.technology"></span>
+
+      </div>
+
+      <div class="one-half">
+        <div class="card">
+          <div class="project__live-demo" *ngIf="project.liveUrl">
+            <h2>Check it live</h2>
+            <p>See the final result here.</p>
+            <a [href]="project.liveUrl" class="btn btn--transparent" target="_blank" rel="noreferrer"><i
+                class="fas fa-external-link-alt"></i> Go to site</a>
+          </div>
+
+          <div class="project__demo">
+            <app-demo *ngIf="project.demoFolder" [demoName]="project.name" [demoFolder]="project.demoFolder"></app-demo>
+          </div>
+
+          <div class="project__code" *ngIf="project.repo">
+            <h2 class="project__title-code">Code</h2>
+            <p>Check out the code on GitHub.</p>
+            <a [href]="project.repo" class="btn btn--transparent" target="_blank" rel="noreferrer"><i
+                class="fab fa-github"></i> Github
+              repo</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

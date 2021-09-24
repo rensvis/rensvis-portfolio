@@ -1,0 +1,168 @@
+// THEMES
+
+@mixin light {
+  --color-bg: #f2f2f2;
+  --color-bg-texture: #ebebeb;
+  --color-bg-offset: #e4e4e4;
+  --color-text: #0d0d0d;
+  --color-text-offset: #9c9c9c;
+  --color-primary: #1f929f;
+  --color-primary-light: #7fc1c9;
+  --color-primary-offset: rgb(106, 157, 163);
+  --color-primary-trans: #1f929f75;
+  --color-secondary: #9a4e7c;
+  --color-ternary: #2da569;
+  --color-header-bg: #aaafaf;
+  --color-header-bg: #3f3f3f;
+}
+
+@mixin developer {
+  --color-bg: #2c2c2c;
+  --color-bg-texture: #222222;
+  --color-bg-offset: #535353;
+  --color-text: #ececec;
+  --color-text-offset: #ffffff;
+  --color-primary: #00a5cf;
+  --color-primary-light: #00a5cf;
+  --color-primary-offset: #00a5cf;
+  --color-primary-trans: #00a6cf98;
+  --color-secondary: #9fffcb;
+  --color-ternary: #25a18e;
+  --color-header-bg: #0d0d0d;
+}
+
+@mixin coffee {
+  --color-bg: #3f3535;
+  --color-bg-texture: #4b4444;
+  --color-bg-offset: #524646;
+  --color-text: #ffe8d1;
+  --color-text-offset: #faeada;
+  --color-primary: #dfba57;
+  --color-primary-light: #ddc993;
+  --color-primary-offset: #e9be49;
+  --color-primary-trans: #dfba5799;
+  --color-secondary: #ff8811;
+  --color-ternary: #726262;
+  --color-header-bg: #312d2a;
+}
+
+@mixin designer {
+  --color-bg: #faf4f3;
+  --color-bg-texture: #f7e8e7;
+  --color-bg-offset: #f5e1df;
+  --color-text: #264653;
+  --color-text-offset: #1d3741;
+  --color-primary: #f94144;
+  --color-primary-light: #ddc993;
+  --color-primary-offset: #f9844a;
+  --color-primary-trans: #f9414499;
+  --color-secondary: #90be6d;
+  --color-ternary: #a2d2ff;
+  --color-header-bg: #e6c8c3;
+}
+
+@mixin hacker {
+  --color-bg: #221b24;
+  --color-bg-texture: #27132b;
+  --color-bg-offset: #352338;
+  --color-text: #e7fae3;
+  --color-text-offset: #b2ff9e;
+  --color-primary: #affc41;
+  --color-primary-light: #d0fd91;
+  --color-primary-offset: #a6e74c;
+  --color-primary-trans: #affc4199;
+  --color-secondary: #1dd3b0;
+  --color-ternary: #b2ff9e;
+  --color-header-bg: #080808;
+}
+
+
+
+
+// light
+html {
+  @include light;
+}
+
+.theme-switcher__btn--light {
+  @include light;
+}
+
+// developer
+html.developer {
+  @include developer;
+}
+
+.theme-switcher__btn--developer {
+  @include developer;
+}
+
+// coffee
+html.coffee {
+  @include coffee;
+}
+
+.theme-switcher__btn--coffee {
+  @include coffee;
+}
+
+// designer
+html.designer {
+  @include designer;
+}
+
+.theme-switcher__btn--designer {
+  @include designer;
+}
+
+// hacker
+html.hacker {
+  @include hacker;
+}
+
+.theme-switcher__btn--hacker {
+  @include hacker;
+}
+
+
+
+// css variables
+:root {
+  --headerHeight: 100px;
+  --font-body: "Poppins", sans-serif;
+  --font-head: "Poppins", sans-serif;
+  --font-size: 1.2rem;
+  --font-size-s: 1rem;
+  --font-size-xs: .8rem;
+  --lh: 1.75;
+  --lh-s: 1.5;
+  --lh-xs: 1.25;
+  --card-shadow: 0 4px 2px rgba(37, 37, 37, 0.253);
+  --overlay-bg: rgba(0, 0, 0, 0.9);
+  --br: 0.25rem;
+  // padding/margin
+  --spacing-xs: 0.25rem;
+  --spacing-s: 0.5rem;
+  --spacing-m: 1rem;
+  --spacing-ml: 1.5rem;
+  --spacing-l: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-xxl: 5rem;
+  --spacing-xxxl: 8rem;
+
+  --container-width: 1500px;
+  --container-width-m: 1100px;
+  --container-width-s: 800px;
+  --container-padding: 20px;
+
+  --glass1: rgba(255, 255, 255, 0.075);
+  --glass2: rgba(255, 255, 255, 0.192);
+  --glass3: rgba(255, 255, 255, 0.5);
+
+  --theme-transition: all 0.3s ease;
+  transition: var(--theme-transition);
+
+  // --color-header-bg: #0d0d0d;
+  --color-header-text: white;
+
+}

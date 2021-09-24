@@ -1,0 +1,22 @@
+<h2>Demo</h2>
+<p>Click the side panel or the button to see the result.</p>
+<a class="btn btn--transparent" (click)="toggleView()"><i class="fas fa-laptop-code"></i> Open demo</a>
+
+<div class="demo-options" [class.show]="isOpen">
+  <div class="demo-options__close" (click)="toggleView()">
+    <!-- <i class="fas fa-chevron-left"></i> -->
+    <i class="fas fa-times"></i>
+  </div>
+  <div class="demo-options__name">
+    <h4>{{ demoName }}</h4>
+  </div>
+</div>
+
+<aside class="demo" [class.open]="isOpen" (click)="asideClickHandler()">
+  <div class="demo__inner">
+    <iframe [src]="path | safe" frameborder="0"></iframe>
+  </div>
+  <a class="demo__marker" (click)="toggleView()">
+    <span>Open demo</span>
+  </a>
+</aside>

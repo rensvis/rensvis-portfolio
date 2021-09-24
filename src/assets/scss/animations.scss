@@ -1,0 +1,178 @@
+@import "/src/assets/scss/mixins.scss";
+@import "/src/assets/scss/structures.scss";
+@import "/src/assets/scss/general.scss";
+
+
+
+$themeTransition: background 0.3s ease,
+color 0.3s ease;
+
+
+
+// scales bg image on page load (page header)
+@keyframes scaleBG {
+  from {
+    transform: scale(1.2);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+
+@mixin enableFadeIn($delay:0) {
+  opacity: 0;
+  animation: 1s calc(#{$delay} * 0.15s + 0.3s) fadeIn forwards;
+}
+
+.fade-transition {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 30px, 0);
+  -moz-transform: translate3d(0, 30px, 0);
+  -ms-transform: translate3d(0, 30px, 0);
+  -o-transform: translate3d(0, 30px, 0);
+  transform: translate3d(0, 30px, 0);
+  transition: all 1s ease !important;
+
+  &.show {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 30px, 0);
+    -moz-transform: translate3d(0, 30px, 0);
+    -ms-transform: translate3d(0, 30px, 0);
+    -o-transform: translate3d(0, 30px, 0);
+    transform: translate3d(0, 30px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+$mockupTransition: transform cubic-bezier(0, 0, 0.27, 0.98) 0.8s;
+$mockupTransitionBrendly: 1200ms cubic-bezier(.08, .37, .1, 1.06); // prefer mine
+
+.floating-scroll {
+  // position: absolute;
+  // z-index: 1;
+  transition: $mockupTransition !important;
+}
+
+.floating-scroll-container {
+  overflow: hidden;
+  padding: var(--spacing-l) 0;
+}
+
+// fadeIn with optional argument, positive n for delay (1 gives delay of .15s, 2 gives .3s, etc.)
+@mixin enableFadeIn($delay:0) {
+  opacity: 0;
+  animation: 1s calc(#{$delay} * 0.15s + 0.3s) fadeIn forwards;
+}
+
+
+// one by one fade in
+.obo-fi {
+
+  &__item {
+    opacity: 0;
+  }
+
+  &--in-view {
+
+    .obo-fi__item {
+      opacity: 1;
+
+      @for $i from 0 through 100 {
+        $delay: $i * 0.15;
+
+        &:nth-child(#{$i}) {
+          opacity: 0;
+          animation: 1s #{$delay}s fadeIn forwards;
+        }
+      }
+    }
+  }
+}
+
+
+// page header
+.blur-circle {
+  filter: blur(50px);
+  transition: var(--theme-transition);
+  z-index: -1;
+  position: absolute;
+  border-radius: 100%;
+  transition: var(--theme-transition);
+
+  // this order matters
+
+  @include fullSize {
+    transform: translate(-50%, -50%) scale(1.8);
+    filter: blur(40px);
+  }
+
+  @include atWide {
+    transform: translate(-50%, -50%) scale(2.2);
+  }
+
+  @include atUltraWide {
+    transform: translate(-50%, -50%) scale(2.5);
+  }
+
+  @include atMedium {
+    transform: translate(-50%, -50%) scale(1.4);
+    filter: blur(35px);
+  }
+
+  @include atSmall {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  @include atXSmall {
+    transform: translate(-50%, -50%);
+  }
+
+}
+
+
+@keyframes text-clip {
+  from {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+
+@mixin headerTitleAnimation {
+  animation: titleShrink 2s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+  // animation: titleShrink 3s 0s forwards;
+}
+
+@keyframes titleShrink {
+  from {
+    transform: scale(1.6);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}

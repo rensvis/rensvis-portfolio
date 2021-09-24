@@ -1,0 +1,24 @@
+@import "/src/assets/scss/mixins.scss";
+@import "/src/assets/scss/structures.scss";
+@import "/src/assets/scss/animations.scss";
+@import "/src/assets/scss/general.scss";
+
+
+
+.project {
+
+  &__title-code {
+    // margin-top: var(--spacing-l);
+  }
+
+  &__video {
+    width: 100%;
+    border-radius: var(--br);
+  }
+
+  &__live-demo,
+  &__demo,
+  &__code {
+    margin-bottom: var(--spacing-ml);
+  }
+}

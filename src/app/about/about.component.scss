@@ -1,0 +1,43 @@
+@import "/src/assets/scss/mixins.scss";
+@import "/src/assets/scss/structures.scss";
+@import "/src/assets/scss/animations.scss";
+@import "/src/assets/scss/general.scss";
+
+
+.about {
+
+
+  &__author {
+    @include atMedium {
+      margin-bottom: var(--spacing-xxl);
+    }
+  }
+
+  &__img {
+    // border-radius: var(--br);
+    border-radius: 100%;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin-bottom: var(--spacing-ml);
+    border: solid 5px var(--color-primary);
+    transition: var(--theme-transition);
+  }
+
+  &__name {
+    margin-bottom: var(--spacing-xs);
+  }
+
+  &__role {
+    margin-bottom: var(--spacing-xs);
+    line-height: var(--lh-s);
+  }
+
+  &__sub-role {
+    font-size: var(--font-size-xs);
+  }
+
+  p~h3 {
+    margin-top: 4rem;
+  }
+}

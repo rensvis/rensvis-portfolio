@@ -1,0 +1,88 @@
+@import "/src/assets/scss/mixins.scss";
+@import "/src/assets/scss/structures.scss";
+@import "/src/assets/scss/animations.scss";
+@import "/src/assets/scss/general.scss";
+
+
+.projects {
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+
+.project {
+  width: 48%;
+  // overflow: hidden;
+  position: relative;
+  margin-bottom: var(--spacing-xl);
+
+  @include atMedium {
+    width: 100%;
+  }
+
+  @include atWide {
+    width: 32%;
+  }
+
+  &__link {
+    &:hover {
+      .card {
+        // border: solid 6px var(--color-primary);
+        transform: translateY(-10px);
+      }
+
+      .project {
+        &__title {
+          color: var(--color-primary);
+        }
+      }
+    }
+  }
+
+  .card {
+    padding: 0;
+    overflow: hidden;
+    transition: all .2s;
+  }
+
+  &__video {
+    width: 100%;
+  }
+
+  &__video-overlay {}
+
+  &__content {
+    padding: var(--spacing-l);
+    position: relative;
+  }
+
+
+  &__title {
+    display: inline-block;
+    transition: all .2s;
+  }
+
+  &__date {
+    font-size: var(--font-size-xs);
+    position: absolute;
+    top: 0;
+    right: 10px;
+  }
+
+  &__description {
+    // font-size: var(--font-size-s);
+    margin-bottom: var(--spacing-xs);
+    margin-bottom: 0;
+  }
+
+  .read-more {
+    display: inline-block;
+    margin-bottom: var(--spacing-ml);
+  }
+
+
+}

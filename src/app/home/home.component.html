@@ -1,0 +1,46 @@
+<section class="hp">
+  <div class="container">
+    <h1 class="section-heading"><span class="section-heading__highlight">Projects</span> I've<br>worked on recently
+    </h1>
+  </div>
+
+  <!-- <a routerLink="/about">ABOUT</a> -->
+
+  <app-carousel>
+    <div class="hp__slide" *ngFor="let project of projects; let i = index" attr.data-index="{{ i }}">
+      <div class="hp__project">
+        <video src="assets\videos\video.mp4" id="video-background" class="video-background hp__project__video" autoplay
+          muted loop preload playsinline oncanplay="this.play()" onloadedmetadata="this.muted = true"></video>
+        <div class="hp__project__video-overlay"></div>
+        <span class="hp__project__date">{{ project.date | date :'mediumDate' }}</span>
+        <div class="hp__project__content">
+          <a [routerLink]="['/projects', project.id]" class="hp__project__link">
+            <h3 class="hp__project__title">{{ project.name }}</h3>
+          </a>
+          <p class="hp__project__description">{{ project.description.short }}</p>
+        </div>
+      </div>
+    </div>
+  </app-carousel>
+
+  <div class="container">
+    <div class="center">
+      <a routerLink="projects" class="hp__see-all">
+        See all projects <i class="fas fa-arrow-right service-card__arrow"></i>
+      </a>
+    </div>
+
+
+  </div>
+
+  <span class="s-bg-title">
+    <span class="s-bg-title__letter">P</span>
+    <span class="s-bg-title__letter">r</span>
+    <span class="s-bg-title__letter">o</span>
+    <span class="s-bg-title__letter">j</span>
+    <span class="s-bg-title__letter">e</span>
+    <span class="s-bg-title__letter">c</span>
+    <span class="s-bg-title__letter">t</span>
+    <span class="s-bg-title__letter">s</span>
+  </span>
+</section>

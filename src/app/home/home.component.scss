@@ -1,0 +1,183 @@
+@import "/src/assets/scss/mixins.scss";
+@import "/src/assets/scss/structures.scss";
+@import "/src/assets/scss/animations.scss";
+@import "/src/assets/scss/general.scss";
+
+$color: white;
+
+.hero {
+  // @include coverBackground;
+
+  height: calc(100vh);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  position: relative;
+
+  @include atMedium {
+    height: 80vh;
+  }
+
+  &__video,
+  &__video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__video-overlay {
+    background-color: rgba(0, 0, 0, 0.404);
+  }
+
+  &__video {
+    .video-background {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    padding: 20px;
+    color: $color;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-bottom: 5%;
+  }
+
+  &__title {
+    font-size: 5rem;
+    order: 2;
+    // @include enableFadeIn(1);
+
+    @include atMedium {
+      font-size: 5.5rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 2rem;
+    margin-bottom: 0;
+    order: 1;
+
+    // @include enableFadeIn(0);
+
+    @include atMedium {
+      font-size: 2rem;
+    }
+  }
+}
+
+
+
+.hp {
+  margin: var(--spacing-xl) 0;
+  // position: relative;
+
+  &__slide {
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+  }
+
+  &__project {
+    position: relative;
+    height: 394px;
+    transition: all .7s;
+    transform-style: preserve-3d;
+    padding: var(--spacing-l);
+    overflow: hidden;
+    border-radius: var(--br);
+
+    &:hover {
+      .hp__project {}
+    }
+
+    &__content {
+      // position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      height: 100%;
+      color: var(--color-bg);
+      position: relative;
+      z-index: 1;
+    }
+
+    &__link {
+      color: var(--color-bg)
+    }
+
+    &__title {
+      // position: absolute;
+      flex-grow: 0;
+      margin-bottom: var(--spacing-xs);
+      color: white;
+    }
+
+    &__description {
+      // position: absolute;
+      font-size: var(--font-size-s);
+      margin: 0;
+      color: white;
+    }
+
+    &__date {
+      position: absolute;
+      z-index: 1;
+      color: var(--color-bg);
+      top: 15px;
+      right: 15px;
+      font-size: var(--font-size-s);
+      color: white;
+    }
+
+    &__video {
+      position: absolute;
+      // inset: 0;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      // z-index: -1;
+    }
+
+    &__video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.336);
+    }
+  }
+
+  &__see-all {
+    // margin: auto;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+  }
+
+}
+
+// 3D EFFECT
+// left of current (target all)
+.hp__slide .hp__project {
+  transform: rotateY(10deg) rotateX(0deg) rotateZ(0deg) scale(.70);
+}
+
+// current
+.hp__slide.current .hp__project {
+  transform: none;
+}
+
+// right of current
+.hp__slide.current~.hp__slide .hp__project {
+  transform: rotateY(-10deg) rotateX(0deg) rotateZ(0deg) scale(.70);
+}
