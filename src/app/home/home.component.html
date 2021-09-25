@@ -9,16 +9,17 @@
   <app-carousel>
     <div class="hp__slide" *ngFor="let project of projects; let i = index" attr.data-index="{{ i }}">
       <div class="hp__project">
-        <video src="assets\videos\video.mp4" id="video-background" class="video-background hp__project__video" autoplay
-          muted loop preload playsinline oncanplay="this.play()" onloadedmetadata="this.muted = true"></video>
-        <div class="hp__project__video-overlay"></div>
-        <span class="hp__project__date">{{ project.date | date :'mediumDate' }}</span>
-        <div class="hp__project__content">
-          <a [routerLink]="['/projects', project.id]" class="hp__project__link">
+        <a [routerLink]="['/projects', project.id]" class="hp__project__link">
+          <video src="assets\videos\video.mp4" id="video-background" class="video-background hp__project__video"
+            autoplay muted loop preload playsinline oncanplay="this.play()"
+            onloadedmetadata="this.muted = true"></video>
+          <div class="hp__project__video-overlay"></div>
+          <span class="hp__project__date">{{ project.date | date :'mediumDate' }}</span>
+          <div class="hp__project__content">
             <h3 class="hp__project__title">{{ project.name }}</h3>
-          </a>
-          <p class="hp__project__description">{{ project.description.short }}</p>
-        </div>
+            <p class="hp__project__description">{{ project.description.short }}</p>
+          </div>
+        </a>
       </div>
     </div>
   </app-carousel>

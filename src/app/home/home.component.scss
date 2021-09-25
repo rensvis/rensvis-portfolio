@@ -80,6 +80,12 @@ $color: white;
   &__slide {
     perspective: 1000px;
     perspective-origin: 50% 50%;
+
+    &.current {
+      .hp__project__content {
+        transform: scale(1);
+      }
+    }
   }
 
   &__project {
@@ -92,7 +98,10 @@ $color: white;
     border-radius: var(--br);
 
     &:hover {
-      .hp__project {}
+      .hp__project__title {
+        color: var(--color-primary);
+        transform: scale(1);
+      }
     }
 
     &__content {
@@ -104,6 +113,9 @@ $color: white;
       color: var(--color-bg);
       position: relative;
       z-index: 1;
+      transform: scale(0.7);
+      transform-origin: bottom left;
+      transition: transform .6s .2s;
     }
 
     &__link {
@@ -115,6 +127,9 @@ $color: white;
       flex-grow: 0;
       margin-bottom: var(--spacing-xs);
       color: white;
+      transition: var(--theme-transition);
+      transform-origin: bottom left;
+      transform: scale(.95);
     }
 
     &__description {
@@ -163,6 +178,7 @@ $color: white;
   }
 
 }
+
 
 // 3D EFFECT
 // left of current (target all)
