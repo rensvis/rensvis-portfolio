@@ -2,15 +2,15 @@
   <div class="container">
     <div class="row row--lg">
 
-      <div class="one-half">
-
+      <div class="two-thirds">
         <h2 class="project__title-about">About this project</h2>
         <p class="project__description">{{ project.description.long }}</p>
         <span class="tag" *ngFor="let tag of project.tags" [innerHTML]="tag.icon + tag.technology"></span>
+        <img [src]="'assets/images/' + project.gif" class="img-background project__img" alt="project.name + ' demo'">
 
       </div>
 
-      <div class="one-half">
+      <div class="one-third">
         <div class="card">
           <div class="project__live-demo" *ngIf="project.liveUrl">
             <h2>Check it live</h2>

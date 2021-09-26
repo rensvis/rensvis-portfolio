@@ -17,8 +17,8 @@ $color: white;
     height: 80vh;
   }
 
-  &__video,
-  &__video-overlay {
+  &__img,
+  &__img-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -26,12 +26,12 @@ $color: white;
     bottom: 0;
   }
 
-  &__video-overlay {
+  &__img-overlay {
     background-color: rgba(0, 0, 0, 0.404);
   }
 
-  &__video {
-    .video-background {
+  &__img {
+    .img-background {
       height: 100%;
       width: 100%;
       object-fit: cover;
@@ -149,7 +149,7 @@ $color: white;
       color: white;
     }
 
-    &__video {
+    &__img {
       position: absolute;
       // inset: 0;
       top: 0;
@@ -160,7 +160,7 @@ $color: white;
       // z-index: -1;
     }
 
-    &__video-overlay {
+    &__img-overlay {
       position: absolute;
       top: 0;
       left: 0;

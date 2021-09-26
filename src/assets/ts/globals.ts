@@ -18,10 +18,7 @@ export const projects = [{
   },
   repo: 'https://github.com/rensvis/react-joke-bot',
   demoFolder: 'react-joke-bot',
-  video: {
-    lowRes: '',
-    highRes: ''
-  },
+  gif: 'react-joke-bot.gif',
 },
 {
   id: 2,
@@ -40,10 +37,7 @@ export const projects = [{
   repo: '',
   liveUrl: 'https://rensvis.nl',
   demoFolder: '',
-  video: {
-    lowRes: '',
-    highRes: ''
-  }
+  gif: 'react-joke-bot.gif',
 },
 {
   id: 3,
@@ -65,10 +59,7 @@ export const projects = [{
   },
   repo: 'https://github.com/rensvis/react-joke-bot',
   demoFolder: 'react-joke-bot',
-  video: {
-    lowRes: '',
-    highRes: ''
-  }
+  gif: 'react-joke-bot.gif',
 }];
 
 

@@ -5,7 +5,7 @@
 
 .project {
 
-  .one-half {
+  .two-thirds {
     margin-bottom: var(--spacing-xl);
   }
 
@@ -13,9 +13,10 @@
     // margin-top: var(--spacing-l);
   }
 
-  &__video {
-    width: 100%;
+  &__img {
+    max-width: 100%;
     border-radius: var(--br);
+    margin-top: var(--spacing-l);
   }
 
   &__live-demo,
