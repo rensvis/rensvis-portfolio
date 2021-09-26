@@ -14,8 +14,9 @@
   }
 
   &__video {
-    width: 100%;
+    max-width: 100%;
     border-radius: var(--br);
+    margin-top: var(--spacing-l);
   }
 
   &__live-demo,

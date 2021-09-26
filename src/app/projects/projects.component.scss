@@ -5,26 +5,28 @@
 .projects {
 
   &__row {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    // justify-content: space-between;
+    // flex-wrap: wrap;
+    grid-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    // grid-template-columns: auto;
+
+    @include atWide {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include atMedium {
+      grid-template-columns: 1fr;
+    }
   }
 }
 
 
 .project {
-  width: 48%;
   // overflow: hidden;
   position: relative;
   margin-bottom: var(--spacing-xl);
-
-  @include atMedium {
-    width: 100%;
-  }
-
-  @include atWide {
-    width: 32%;
-  }
 
   &__link {
     &:hover {

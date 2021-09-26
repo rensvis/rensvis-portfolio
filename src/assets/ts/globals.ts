@@ -13,13 +13,13 @@ export const projects = [{
   ],
   date: new Date('09/13/2021'),
   description: {
-    short: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
+    short: 'In need of a laugh? This chat bot provides you with an endless stream of jokes!',
     long: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique.'
   },
   repo: 'https://github.com/rensvis/react-joke-bot',
   demoFolder: 'react-joke-bot',
   video: {
-    lowRes: '',
+    lowRes: 'react-joke-bot.mp4',
     highRes: ''
   },
 },
@@ -34,42 +34,43 @@ export const projects = [{
   ],
   date: new Date('09/13/2021'),
   description: {
-    short: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ...',
+    short: 'A portfolio site to showcase the client website projects I have done.',
     long: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique.'
   },
   repo: '',
   liveUrl: 'https://rensvis.nl',
   demoFolder: '',
   video: {
-    lowRes: '',
+    lowRes: 'rensvis-nl.mp4',
     highRes: ''
   }
 },
-{
-  id: 3,
-  name: "Vue Distance Calculator",
-  tags: [
-    {
-      technology: 'Vue',
-      icon: '<i class="fab fa-vuejs"></i>'
-    },
-    {
-      technology: 'Google Maps API',
-      icon: '<i class="fas fa-map-marked-alt"></i>'
-    }
-  ],
-  date: new Date('09/13/2021'),
-  description: {
-    short: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique...',
-    long: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique.'
-  },
-  repo: 'https://github.com/rensvis/react-joke-bot',
-  demoFolder: 'react-joke-bot',
-  video: {
-    lowRes: '',
-    highRes: ''
-  }
-}];
+// {
+//   id: 3,
+//   name: "Vue Distance Calculator",
+//   tags: [
+//     {
+//       technology: 'Vue',
+//       icon: '<i class="fab fa-vuejs"></i>'
+//     },
+//     {
+//       technology: 'Google Maps API',
+//       icon: '<i class="fas fa-map-marked-alt"></i>'
+//     }
+//   ],
+//   date: new Date('09/13/2021'),
+//   description: {
+//     short: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique...',
+//     long: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique.'
+//   },
+//   repo: 'https://github.com/rensvis/react-joke-bot',
+//   demoFolder: 'react-joke-bot',
+//   video: {
+//     lowRes: '',
+//     highRes: ''
+//   }
+// }
+];
 
 
 export const socials = [

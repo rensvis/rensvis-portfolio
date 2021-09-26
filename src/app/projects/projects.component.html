@@ -4,7 +4,7 @@
       <article class="project" *ngFor="let project of projects; let i = index" attr.data-index="{{ i }}">
         <a [routerLink]="['/projects', project.id]" class="project__link">
           <div class="card">
-            <video src="assets\videos\video.mp4" id="video-background" class="video-background project__video" autoplay
+            <video [src]="'assets/videos/' + project.video.lowRes" id="video-background" class="video-background project__video" autoplay
               muted loop preload playsinline oncanplay="this.play()" onloadedmetadata="this.muted = true"></video>
             <div class="project__video-overlay"></div>
             <div class="project__content">
