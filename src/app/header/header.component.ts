@@ -34,7 +34,7 @@ export class HeaderComponent implements OnInit {
     // );
 
     this.setRoute();
-    this.initBlur();
+    // this.initBlur();
   }
 
   checkScrollHeight() {
