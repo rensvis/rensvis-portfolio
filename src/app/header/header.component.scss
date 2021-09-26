@@ -616,11 +616,13 @@ background-color .6s;
     width: 100%;
     height: 100%;
     position: relative;
+    background: linear-gradient(20deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    transition: var(--theme-transition);
+
     
     // background: var(--color-header-bg);
     // // filter: blur(25px);
     // transform: scale(1.1);
-    // transition: var(--theme-transition);
     // overflow: hidden;
   }
 }

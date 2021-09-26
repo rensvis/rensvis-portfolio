@@ -36,7 +36,7 @@ export class HeaderComponent implements OnInit {
     this.setRoute();
 
     // causing performance issues on mobile
-    this.initBlur();
+    // this.initBlur();
   }
 
   checkScrollHeight() {

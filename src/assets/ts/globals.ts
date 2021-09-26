@@ -14,7 +14,7 @@ export const projects = [{
   date: new Date('09/13/2021'),
   description: {
     short: 'In need of a laugh? This chat bot provides you with an endless stream of jokes!',
-    long: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique.'
+    long: 'When applying for a job I needed to show off my React skills, so I created this chat bot project. I wanted to simplify the code by implementing multiple components, make it look the part with fluid animations and add some complexity by consuming an api. This bot comes in handy whenever I need to impress some friends or colleagues. 😁'
   },
   repo: 'https://github.com/rensvis/react-joke-bot',
   demoFolder: 'react-joke-bot',
@@ -35,7 +35,7 @@ export const projects = [{
   date: new Date('09/13/2021'),
   description: {
     short: 'A portfolio site to showcase the client website projects I have done.',
-    long: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique.'
+    long: 'In my spare time I help businesses grow their online presence by building awesome websites. Rensvis.nl is a website I built to show off the projects I\'ve done and where potential clients can reach out. I mostly use Wordpress for building the sites. I always build a completely custome theme, which gives me the flexibility to design and create anything the client wants. It also ensures great performance and optimal SEO.'
   },
   repo: '',
   liveUrl: 'https://rensvis.nl',
