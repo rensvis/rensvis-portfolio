@@ -616,10 +616,11 @@ background-color .6s;
     width: 100%;
     height: 100%;
     position: relative;
-    background: var(--color-header-bg);
-    // filter: blur(25px);
-    transform: scale(1.1);
-    transition: var(--theme-transition);
-    overflow: hidden;
+    
+    // background: var(--color-header-bg);
+    // // filter: blur(25px);
+    // transform: scale(1.1);
+    // transition: var(--theme-transition);
+    // overflow: hidden;
   }
 }

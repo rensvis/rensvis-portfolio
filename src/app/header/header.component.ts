@@ -34,7 +34,9 @@ export class HeaderComponent implements OnInit {
     // );
 
     this.setRoute();
-    // this.initBlur();
+
+    // causing performance issues on mobile
+    this.initBlur();
   }
 
   checkScrollHeight() {
@@ -226,4 +228,5 @@ export class HeaderComponent implements OnInit {
       container?.insertAdjacentElement('beforeend', circle)
     }
   }
+
 }
