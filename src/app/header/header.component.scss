@@ -93,8 +93,8 @@ header {
     $height: 12%;
     color: var(--color-header-text);
     background-image: linear-gradient(90deg,
-        var(--color-secondary) 0,
-        var(--color-secondary));
+        var(--color-primary) 0,
+        var(--color-primary));
     background-position: 0 100%;
     background-size: 0% $height;
     background-repeat: no-repeat;
