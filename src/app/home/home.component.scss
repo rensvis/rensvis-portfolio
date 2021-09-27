@@ -95,10 +95,14 @@ $color: white;
     transform-style: preserve-3d;
     padding: var(--spacing-l);
     overflow: hidden;
-    border-radius: var(--br);
+    border-radius: var(--br-l);
     border: solid 4px var(--color-bg-offset);
+    transition: var(--theme-transition);
+
 
     &:hover {
+      border: solid 4px var(--color-primary);
+
       .hp__project__title {
         color: var(--color-primary);
         transform: scale(1);
