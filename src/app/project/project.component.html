@@ -5,11 +5,10 @@
       <div class="one-half">
 
         <h2 class="project__title-about">About this project</h2>
-        <p class="project__description">{{ project.description.long }}</p>
+        <div class="project__description" [innerHTML]="project.description.long"></div>
         <span class="tag" *ngFor="let tag of project.tags" [innerHTML]="tag.icon + tag.technology"></span>
-        <video [src]="'assets/videos/' + project.video.lowRes" class="video-background project__video"
-            autoplay muted loop preload playsinline oncanplay="this.play()"
-            onloadedmetadata="this.muted = true"></video>
+        <video [src]="'assets/videos/' + project.video.lowRes" class="video-background project__video" autoplay muted
+          loop preload playsinline oncanplay="this.play()" onloadedmetadata="this.muted = true"></video>
 
       </div>
 

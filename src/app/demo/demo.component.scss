@@ -1,3 +1,5 @@
+@import "/src/assets/scss/mixins.scss";
+
 $demoTransition: .4s;
 
 .demo {
@@ -77,20 +79,18 @@ $demoTransition: .4s;
   }
 }
 
-
-$accent: var(--color-primary);
-$accent: var(--color-text);
-
 .demo-options {
   position: fixed;
-  top: 15px;
-  left: 15px;
+  top: 0px;
+  left: 0px;
   max-width: calc(100% - 20px);
   z-index: 202;
   background: var(--color-bg);
-  border-radius: var(--br);
-  border: solid $accent 2px;
-  box-shadow: var(--card-shadow);
+  border-radius: 0 0 var(--br) 0;
+  border: solid var(--color-text) 2px;
+  border-top: none;
+  border-left: none;
+  // box-shadow: var(--card-shadow);
 
   display: flex;
   align-items: center;
@@ -116,8 +116,17 @@ $accent: var(--color-text);
     display: flex;
     justify-content: center;
     align-items: center;
-    background: $accent;
-    color: var(--color-bg);
+    // background: var();
+    // color: var(--color-bg);
+
+    @include atSmall {
+      // width: 30px;
+      min-height: 30px;
+
+      i {
+        font-size: 15px;
+      }
+    }
 
     &:hover {
       i {
@@ -140,6 +149,10 @@ $accent: var(--color-text);
 
     h4 {
       margin: 0;
+
+      @include atSmall {
+        font-size: var(--font-s);
+      }
     }
   }
 }
