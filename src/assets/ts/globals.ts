@@ -67,7 +67,7 @@ export let projects = [
     repo: 'https://github.com/rensvis/vue-ttt-ai',
     demoFolder: 'vue-ttt-ai',
     video: {
-      lowRes: 'react-joke-bot.mp4',
+      lowRes: 'vue-ttt-ai-540-compressed.mp4',
       highRes: ''
     }
   }
