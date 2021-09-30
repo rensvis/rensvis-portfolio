@@ -39,6 +39,10 @@ $slideMargin: var(--spacing-m);
     &--right {
       right: 30px;
     }
+
+    @include atMedium {
+      display: none;
+    }
   }
 
 

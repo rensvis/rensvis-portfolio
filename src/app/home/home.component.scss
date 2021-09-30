@@ -99,6 +99,9 @@ $color: white;
     border: solid 4px var(--color-bg-offset);
     transition: var(--theme-transition);
 
+    @include atMedium {
+      border-radius: var(--br);
+    }
 
     &:hover {
       border: solid 4px var(--color-primary);

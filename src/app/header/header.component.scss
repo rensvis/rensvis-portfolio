@@ -476,11 +476,7 @@ background-color .6s;
       visibility: visible;
     }
 
-    height: calc(100vh);
-
-    @include atMedium {
-      height: 80vh;
-    }
+    height: calc(60vh);
   }
 
 
@@ -568,7 +564,7 @@ background-color .6s;
       // @include enableFadeIn(1);
 
       @include atMedium {
-        font-size: 5.5rem;
+        font-size: 3.5rem;
       }
     }
 
@@ -619,7 +615,7 @@ background-color .6s;
     background: linear-gradient(20deg, var(--color-primary) 0%, var(--color-secondary) 100%);
     transition: var(--theme-transition);
 
-    
+
     // background: var(--color-header-bg);
     // // filter: blur(25px);
     // transform: scale(1.1);
