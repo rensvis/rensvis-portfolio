@@ -1,11 +1,5 @@
 <app-header></app-header>
 
-<!-- <app-page-header></app-page-header> -->
-
 <main [@routeAnimations]="prepareRoute(outlet)" style="position: relative;">
   <router-outlet #outlet="outlet" (activate)="onActivate($event)"></router-outlet>
 </main>
-
-<!-- <div [@routeAnimations]="outlet.isActivated ? outlet.activatedRoute : ''">
-  <router-outlet #outlet="outlet"></router-outlet>
-</div> -->

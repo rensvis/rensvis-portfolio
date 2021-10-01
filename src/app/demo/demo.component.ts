@@ -36,9 +36,7 @@ export class DemoComponent implements OnInit {
   }
 
   keyPressHandler(e: KeyboardEvent) {
-    if (e.code === 'Escape' && this.isOpen) {
-        this.toggleView();
-    }
+    if (e.code === 'Escape' && this.isOpen) this.toggleView();
   }
 
   asideClickHandler() {

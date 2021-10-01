@@ -14,7 +14,6 @@ export class ProjectComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = Number(this.route.snapshot.paramMap.get('id'));
-
     this.project = this.projects.find(p => p.id === this.id)
   }
 }
